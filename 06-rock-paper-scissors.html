@@ -8,28 +8,28 @@
         <button onclick="whoWin('Rock');">Rock</button>
         <button onclick="whoWin('Paper');">Paper</button>
         <button onclick="whoWin('Scissors');">Scissors</button>
-    </body>
-    <script>
+        <script>
         
-        // console.log(computerMove);
-        function whoWin(yourMove){
-            let result = '';
-            const game = ['Rock', 'Paper', 'Scissors'];
-            // 0 = rock, 1 = paper, 2 = scissors
-            const computerMove = Math.floor(Math.random() * 3); // output: 0, 1 or 2
-            // console.log(`Computer Move: ${computerMove}`);
-            // console.log(`Your Move: ${yourMove}`);
-            if (game.indexOf(yourMove) === computerMove){
-                result = 'Tie.';
+            // console.log(computerMove);
+            function whoWin(yourMove){
+                let result = '';
+                const game = ['Rock', 'Paper', 'Scissors'];
+                // 0 = rock, 1 = paper, 2 = scissors
+                const computerMove = Math.floor(Math.random() * 3); // output: 0, 1 or 2
+                // console.log(`Computer Move: ${computerMove}`);
+                // console.log(`Your Move: ${yourMove}`);
+                if (game.indexOf(yourMove) === computerMove){
+                    result = 'Tie.';
+                }
+                else if ((game.indexOf(yourMove) === 0 && computerMove === 2) || (game.indexOf(yourMove) === 1 && computerMove === 0) || (game.indexOf(yourMove) === 2 && computerMove === 1) ){
+                    result = 'You win.';
+                }
+                else{
+                    result = 'You lose.';
+                }
+                alert(`You picked: ${yourMove}. Computer picked: ${game[computerMove]}. ${result}`);
+    
             }
-            else if ((game.indexOf(yourMove) === 0 && computerMove === 2) || (game.indexOf(yourMove) === 1 && computerMove === 0) || (game.indexOf(yourMove) === 2 && computerMove === 1) ){
-                result = 'You win.';
-            }
-            else{
-                result = 'You lose.';
-            }
-            alert(`You picked: ${yourMove}. Computer picked: ${game[computerMove]}. ${result}`);
-
-        }
-    </script>
+        </script>
+    </body>
 </html>

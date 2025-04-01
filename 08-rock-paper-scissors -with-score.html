@@ -10,42 +10,43 @@
         <button onclick="whoWin('Scissors');">Scissors</button>
         <p id="result">You picked: null. Computer picked: null.</p>
         <p id="score">Wins:0  Losses:0  Ties:0 </p>
-    </body>
-    <script>
+        <script>
         
-        const score = {
-            wins: 0,
-            losses: 0,
-            ties: 0
-        };
-
-        // console.log(computerMove);
-        function whoWin(yourMove){
-            let result = '';
-            const game = ['Rock', 'Paper', 'Scissors'];
-            // 0 = rock, 1 = paper, 2 = scissors
-            const computerMove = Math.floor(Math.random() * 3); // output: 0, 1 or 2
-            // console.log(`Computer Move: ${computerMove}`);
-            // console.log(`Your Move: ${yourMove}`);
-            if (game.indexOf(yourMove) === computerMove){
-                result = 'Tie.';
-                score.ties += 1;
+            const score = {
+                wins: 0,
+                losses: 0,
+                ties: 0
+            };
+    
+            // console.log(computerMove);
+            function whoWin(yourMove){
+                let result = '';
+                const game = ['Rock', 'Paper', 'Scissors'];
+                // 0 = rock, 1 = paper, 2 = scissors
+                const computerMove = Math.floor(Math.random() * 3); // output: 0, 1 or 2
+                // console.log(`Computer Move: ${computerMove}`);
+                // console.log(`Your Move: ${yourMove}`);
+                if (game.indexOf(yourMove) === computerMove){
+                    result = 'Tie.';
+                    score.ties += 1;
+                }
+                else if ((game.indexOf(yourMove) === 0 && computerMove === 2) || (game.indexOf(yourMove) === 1 && computerMove === 0) || (game.indexOf(yourMove) === 2 && computerMove === 1) ){
+                    result = 'You win.';
+                    score.wins += 1;
+                }
+                else{
+                    result = 'You lose.';
+                    score.losses += 1;
+                }
+                // alert(`You picked: ${yourMove}. Computer picked: ${game[computerMove]}. ${result}`);
+                const resultOutput = document.getElementById('result');
+                resultOutput.innerText = `You picked: ${yourMove}. Computer picked: ${game[computerMove]}. ${result}`;
+    
+                const scoreOutput = document.getElementById('score');
+                scoreOutput.innerText = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+    
             }
-            else if ((game.indexOf(yourMove) === 0 && computerMove === 2) || (game.indexOf(yourMove) === 1 && computerMove === 0) || (game.indexOf(yourMove) === 2 && computerMove === 1) ){
-                result = 'You win.';
-                score.wins += 1;
-            }
-            else{
-                result = 'You lose.';
-                score.losses += 1;
-            }
-            // alert(`You picked: ${yourMove}. Computer picked: ${game[computerMove]}. ${result}`);
-            const resultOutput = document.getElementById('result');
-            resultOutput.innerText = `You picked: ${yourMove}. Computer picked: ${game[computerMove]}. ${result}`;
-
-            const scoreOutput = document.getElementById('score');
-            scoreOutput.innerText = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
-
-        }
-    </script>
+        </script>
+    </body>
+    
 </html>
