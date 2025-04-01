@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        const gpuBrand = {
+            name: 'Nvidia',
+            comment: 'So nvidia fxck you',
+            price: 100000
+        };
+
+        console.log(gpuBrand);
+        console.log(gpuBrand.name);
+        console.log(gpuBrand.comment);
+        console.log(gpuBrand.price);
+
+        gpuBrand.price = 999;
+
+        console.log(gpuBrand.price)
+
+        gpuBrand.model = 'RTX5090';
+        console.log(gpuBrand.model);
+
+        console.log(gpuBrand);
+
+        delete gpuBrand.model;
+
+        console.log(gpuBrand);
+    </script>
+</html>
