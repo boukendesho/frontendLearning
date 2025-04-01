@@ -10,6 +10,8 @@
         <input placeholder="Cost of order" class="js-input" onkeydown="handleCostKeydown(event);">
         <button onclick="calculatorCost();">Calculator</button>
         <p class="js-cost"></p>
+        <input placeholder="input anything" class="js-input-realtime" onkeyup="realtimeDisplay();">
+        <p class="js-input-onkeyup"></p>
         <script>
             function handleCostKeydown(event) {
                 if (event.key === 'Enter'){
@@ -38,6 +40,12 @@
                 }
 
                 document.querySelector('.js-cost').innerHTML = `Cost: $${cost}`;
+            }
+
+            function realtimeDisplay(){
+                const inputElement = document.querySelector('.js-input-realtime');
+
+                document.querySelector('.js-input-onkeyup').innerHTML = inputElement.value;
             }
         </script>
     </body>
