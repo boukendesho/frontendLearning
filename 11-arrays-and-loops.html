@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      const myList1 = [10, 20, 30];
+      const myList2 = ["hi", "hello", "good"];
+
+      function getLastValue(list) {
+        if (list) {
+          return list[list.length - 1];
+        } else {
+          return null;
+        }
+      }
+
+      console.log(getLastValue(myList1));
+      console.log(getLastValue(myList2));
+
+      for (i = 0; i < myList1.length; i++) {
+        console.log(myList1[i]);
+      }
+
+      myList1.forEach((i) => console.log(i));
+
+      function arraySwap(list) {
+        const first = list[0];
+        const last = list[list.length - 1];
+
+        list[0] = last;
+        list[list.length - 1] = first;
+
+        return list;
+      }
+
+      console.log(arraySwap(myList1));
+      console.log(arraySwap(myList2));
+    </script>
+  </body>
+</html>
