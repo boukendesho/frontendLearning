@@ -17,7 +17,7 @@ function addTodoList2() {
 
   const todoDueDate = document.querySelector(".todo-due-date-input");
 
-  if (todoNameInput.value != "" && todoDueDate.value != ""){
+  if (todoNameInput.value.trim() != "" && todoDueDate.value != ""){
     todoList2.push({
       name: todoNameInput.value,
       dueDate: todoDueDate.value,
