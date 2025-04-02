@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Exercise</title>
+        <style>
+            .amazon-button {
+                background-color: rgb(255, 216, 20);
+                border: none;
+                font-size: 20px;
+                padding: 10px 50px;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+
+            .uber-button {
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 15px 30px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .is-toggled {
+                background-color: rgb(230, 230, 230);
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>Amazon button</p>
+        <button class="amazon-button">Add to Cart</button>
+
+        <p>Uber button</p>
+        <button class="uber-button" onclick="requestOrder();">Request now</button>
+
+        <p>ON / OFF</p>
+        <button class="uber-button js-button-1" onclick="toggleButton('.js-button-1');">Gaming</button>
+        <button class="uber-button js-button-2" onclick="toggleButton('.js-button-2');">Music</button>
+        <button class="uber-button js-button-3" onclick="toggleButton('.js-button-3');">Tech</button>
+        <script>
+            function requestOrder() {
+                const requestButtonElement = document.querySelector('.uber-button');
+
+                console.log(requestButtonElement.classList.contains('is-toggled'));
+
+                if (requestButtonElement.classList.contains('is-toggled')) {
+                    requestButtonElement.innerHTML = 'Request now';
+                    requestButtonElement.classList.remove('is-toggled');
+                } else {
+                    requestButtonElement.innerHTML = 'Schedule for later';
+                    requestButtonElement.classList.add('is-toggled');
+                }
+            }
+
+            function toggleButton(jsButton) {
+                const buttonElement = document.querySelector(jsButton);
+
+                if (buttonElement.classList.contains('is-toggled')) {
+                    buttonElement.classList.remove('is-toggled');
+                } else {
+                    buttonElement.classList.add('is-toggled');
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Exercise</title>
+        <style>
+            .uber-button {
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 15px 30px;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+
+            .is-toggled {
+                background-color: rgb(230, 230, 230);
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>ON / OFF</p>
+        <button class="uber-button js-button-1" onclick="toggleButton('.js-button-1');">Gaming</button>
+        <button class="uber-button js-button-2" onclick="toggleButton('.js-button-2');">Music</button>
+        <button class="uber-button js-button-3" onclick="toggleButton('.js-button-3');">Tech</button>
+        <script>
+            function toggleButton(jsButton) {
+                const buttonElement = document.querySelector(jsButton);
+
+                if (buttonElement.classList.contains('is-toggled')) {
+                    buttonElement.classList.remove('is-toggled');
+                } else {
+                    turnOffOtherButton();
+                    buttonElement.classList.add('is-toggled');
+                }
+            }
+
+            function turnOffOtherButton(){
+                const otherButton = document.querySelector('.is-toggled');
+
+                console.log(otherButton);
+
+                if (otherButton) {
+                    otherButton.classList.remove('is-toggled');
+                }
+            }
+        </script>
+    </body>
+</html>
