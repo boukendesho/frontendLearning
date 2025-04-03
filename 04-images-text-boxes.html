@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images and Text Boxes</title>
+    <style>
+      .cat-1 {
+        width: 200px;
+        border-radius: 10px;
+      }
+
+      .cat-2 {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .cat-3 {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 70px;
+      }
+
+      input {
+        display: block;
+        margin: 0.5em;
+        font-size: 15px;
+      }
+
+      .search-bar-1 {
+        padding: 10px 10px;
+        border-radius: 8px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(200, 200, 200);
+      }
+
+      .search-bar-2 {
+        width: 500px;
+        padding: 10px 15px;
+        border: none;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+      }
+
+      .email {
+        color: grey;
+        margin-bottom: 5px;
+      }
+
+      .email-input {
+        margin: 0px;
+        border-style: solid;
+        border-color: black;
+        border-width: 1.5px;
+        border-radius: 5px;
+        padding: 5px 5px;
+        width: 380px;
+      }
+
+      .privacy-policy {
+        color: gray;
+      }
+
+      .agree-button {
+        background-color: rgb(14, 99, 226);
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 15px 100px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+
+      .profile {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+        margin-top: 10px;
+        vertical-align: middle;
+      }
+
+      .text-input {
+        display: inline;
+        border: none;
+        width: 300px;
+        vertical-align: middle;
+      }
+
+      .tweet-button {
+        background-color: rgb(30, 155, 240);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 8px 16px;
+        cursor: pointer;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <img class="cat-1" src="images/cat.jpg" alt="cat-1" />
+    <img class="cat-2" src="images/cat.jpg" alt="cat-2" />
+    <img class="cat-3" src="images/cat.jpg" alt="cat-3" />
+
+    <input type="search" class="search-bar-1" placeholder="Search" />
+    <input type="search" class="search-bar-2" placeholder="Search Google or type a URL" />
+
+    <p class="email">Email</p>
+    <input type="email" class="email-input" />
+    <p class="privacy-policy">By clicking Agree & join, you agree to the Privacy Policy</p>
+    <button class="agree-button">Agree & Join</button>
+
+    <br>
+    <img class="profile" src="images/cat.jpg" alt="profile" />
+    <input type="text" placeholder="What's happening?" class="text-input" />
+    <button class="tweet-button">Tweet</button>
+  </body>
+</html>
