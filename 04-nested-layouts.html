@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Layouts</title>
+    <style>
+      .profile {
+        width: 300px;
+      }
+
+      .profile-text,
+      .follow {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .profile-text {
+        width: 120px;
+      }
+
+      .profile-logo {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 25px;
+      }
+
+      .name,
+      .desc,
+      .rank {
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .desc,
+      .rank {
+        color: gray;
+        font-size: 14px;
+      }
+
+      .follow-button {
+        background-color: hsl(204, 100%, 50%);
+        color: white;
+        font-weight: bold;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="profile">
+      <img src="images/cat.jpg" alt="cat" class="profile-logo" />
+      <div class="profile-text">
+        <p class="name">oliver</p>
+        <p class="desc">the cat</p>
+        <p class="rank">Popular</p>
+      </div>
+      <div class="follow"><button class="follow-button">Follow</button></div>
+    </div>
+  </body>
+</html>
