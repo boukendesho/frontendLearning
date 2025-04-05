@@ -4,16 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Youtube Clone</title>
+    <style>
+      .search-bar {
+        display: block;
+      }
+
+      .video-preview {
+        width: 300px;
+      }
+
+      .channel-picture {
+        display: inline-block;
+        width: 50px;
+        vertical-align: top;
+      }
+
+      .channel-author {
+        width: 40px;
+        border-radius: 50px;
+      }
+
+      .video-info {
+        display: inline-block;
+        width: 200px;
+      }
+
+      .video-title {
+        font-weight: bold;
+      }
+
+      .thumbnail-row {
+        margin-bottom: 10px;
+      }
+
+      .thumbnail {
+        display: block;
+        width: 100%;
+      }
+
+      .video-author, .video-stats {
+        font-size: 12px;
+        color: gray;
+      }
+
+      .video-author {
+        margin-bottom: 4px;
+      }
+
+      .video-stats {
+        margin-top: 4px;
+      }
+
+      .video-title {
+        margin-top: 0;
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
-    <input type="search" placeholder="Search" />
+    <input type="search" placeholder="Search" class="search-bar" />
     <div class="video-preview">
-      <div class="thumbnail">
-        <img src="images/thumbnail-1.webp" alt="thumbnail-1" />
+      <div class="thumbnail-row">
+        <img src="images/thumbnail-1.webp" alt="thumbnail-1" class="thumbnail" />
       </div>
       <div>
         <div class="channel-picture">
-          <img src="images/channel-1.jpeg" alt="channel-1" />
+          <img src="images/channel-1.jpeg" alt="channel-1" class="channel-author" />
         </div>
         <div class="video-info">
           <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
