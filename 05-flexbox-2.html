@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Exercise 2</title>
+    <style>
+      .container {
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgb(200, 200, 200);
+        width: 300px;
+        border-radius: 5px;
+      }
+
+      .box {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 10px;
+        align-items: center;
+      }
+
+      .notifications {
+        background-color: rgb(50, 110, 255);
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 3px 10px;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div>Home</div>
+        <div class="notifications">14</div>
+      </div>
+
+      <div class="box">
+        <div>Notifications</div>
+        <div class="notifications">3</div>
+      </div>
+
+      <div class="box">
+        <div>Messages</div>
+        <div class="notifications">5</div>
+      </div>
+    </div>
+  </body>
+</html>
