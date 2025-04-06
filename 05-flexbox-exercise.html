@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Exercise</title>
+    <style>
+      .box {
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+      }
+
+      .box-picture {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 25px;
+      }
+
+      .box-text {
+        width: 200px;
+        margin-left: 12px;
+      }
+
+      .name {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .type {
+        color: gray;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .trend {
+        color: gray;
+        font-size: 14px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+
+      .box-button {
+        background-color: rgb(30, 155, 255);
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <img src="images/cat.jpg" alt="cat" class="box-picture" />
+      <div class="box-text">
+        <p class="name">oliver</p>
+        <p class="type">the cat</p>
+        <p class="trend">Popular</p>
+      </div>
+      <button class="box-button">Follow</button>
+    </div>
+
+    <div class="box">
+        <img src="images/cat2.jpg" alt="cat" class="box-picture" />
+        <div class="box-text">
+          <p class="name">Mimi</p>
+          <p class="type">Sleep Cat</p>
+          <p class="trend">Popular</p>
+        </div>
+        <button class="box-button">Follow</button>
+      </div>
+
+      <div class="box">
+        <img src="images/dog.jpg" alt="cat" class="box-picture" />
+        <div class="box-text">
+          <p class="name">Rex</p>
+          <p class="type">Happy Bulldog</p>
+          <p class="trend">Popular</p>
+        </div>
+        <button class="box-button">Follow</button>
+      </div>
+  </body>
+</html>
