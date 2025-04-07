@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Exercise 2</title>
+    <link
+      rel="stylesheet"
+      href="styles/05-css-grid-2.css
+    "
+    />
+  </head>
+  <body>
+    <nav><button onclick="toggleSidebar()">sidebar</button>Navbar</nav>
+    <aside id="sidebar">sidebar</aside>
+    <main>
+      <h1>hello</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper viverra enim, sagittis tristique velit. Integer mollis luctus
+        sem vitae fermentum. In vitae mauris consequat, imperdiet risus a, porttitor ligula. Nullam consequat non est vel elementum. Nam sed
+        accumsan sapien. Proin eu mi dapibus, vehicula urna et, molestie neque. Praesent vel ex luctus dui facilisis euismod nec sit amet
+        tellus. Maecenas nisi elit, eleifend at nibh eget, semper tempus turpis. Aenean consequat eleifend dui, vel mollis tellus. Donec
+        eget ullamcorper odio, id accumsan leo. In ultrices urna at ipsum malesuada, vitae viverra ante finibus. Vestibulum sit amet
+        elementum lacus, ac dictum arcu. Curabitur dapibus consequat augue, quis pretium turpis tempus sit amet. Proin volutpat placerat
+        orci, et aliquam tortor cursus ac. Nunc vel aliquam lectus. Morbi semper in ex hendrerit pellentesque. Donec lacinia consequat
+        magna, quis cursus velit consequat at. In eu dui erat. Fusce id rutrum nisl. Vivamus sed lacus tristique, lobortis eros pulvinar,
+        volutpat ante. Sed et quam erat. Donec vel lacinia ipsum, ut fringilla velit. Nunc eget mattis elit. Ut orci quam, aliquam ac augue
+        eget, viverra hendrerit velit. Donec at orci vitae mi fermentum vehicula. Duis risus diam, sollicitudin at tellus vitae, euismod
+        ultrices ligula. Quisque in nisi eu sapien vehicula dictum. Donec cursus nunc eu leo interdum vulputate. Proin semper vulputate
+        dictum. Quisque facilisis posuere ultricies. Suspendisse sodales tortor in nisi egestas tincidunt. Etiam commodo sapien quis orci
+        ullamcorper, vel consectetur libero efficitur. Praesent quis dolor sit amet leo gravida eleifend. Proin laoreet lacus ac sagittis
+        posuere. Pellentesque ac est id augue gravida vestibulum. Maecenas tincidunt sagittis lobortis. Nullam tincidunt dui sed ligula
+        scelerisque, at semper magna pharetra. Sed non ante blandit, feugiat nisl luctus, mattis magna. Etiam id tempus turpis, eget
+        eleifend justo. Integer in metus non libero aliquam pulvinar. Nam pellentesque urna ac arcu venenatis, at fringilla diam hendrerit.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur malesuada laoreet mauris, id
+        accumsan massa. Aliquam ac placerat diam. Integer ultrices varius sodales. Aenean sed diam quis lorem suscipit maximus. Proin nec
+        sapien finibus, iaculis urna at, tempor dui. Curabitur fermentum rhoncus suscipit. Etiam placerat porta dui, id gravida leo suscipit
+        eget. Duis eu elit ut ante rhoncus dapibus gravida in purus. Mauris urna diam, pulvinar nec aliquam in, tempor ut justo. Suspendisse
+        metus magna, aliquam non congue eu, viverra id nulla. Nullam vehicula vel purus nec consectetur. Integer gravida, ipsum sit amet
+        mattis sagittis, eros nulla consequat eros, ac scelerisque magna augue at dui. Integer ligula quam, egestas quis volutpat et,
+        egestas ut dui. Aenean ex eros, auctor vel molestie eget, tristique eget elit. In id orci consectetur, luctus mi nec, lobortis
+        nulla. Pellentesque malesuada laoreet justo ac hendrerit.
+      </p>
+    </main>
+    <footer>Footer</footer>
+    <script>
+      const sideBar = document.getElementById("sidebar");
+
+      function toggleSidebar() {
+        sideBar.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
