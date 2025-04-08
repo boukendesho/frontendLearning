@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "navbar navbar"
+    "sidebar main";
+}
+
+nav {
+    top: 0;
+    /* background-color: lightblue; */
+    position: sticky;
+    grid-area: navbar;
+    height: 2.2rem;
+}
+
+aside {
+    background-color: cadetblue;
+    position: sticky;
+    grid-area: sidebar;
+    width: 3rem;
+    top: 2.2rem;
+    height: calc(100vh - 2.2rem);
+}
+
+main {
+    background-color: bisque;
+    grid-area: main;
+    /* margin: 0.5em 0.5em; */
+}
+
+.navbar-box {
+    display: flex;
+    justify-content: space-between;
+    height: 2.2rem;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    .youtube-menu {
+        height: 1em;
+        cursor: pointer;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .youtube-logo {
+        height: 1em;
+        cursor: pointer;
+    }
+}
+
+.middle-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 4em;
+    margin-right: 2em;
+
+    .search-bar {
+        flex: 1;
+        padding: 0.3em 0.3em;
+        border: 1px solid gray;
+        border-radius: 2px;
+        box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+        height: 1.8em;
+    }
+    .search-button {
+        height: 1.8em;
+        width: 2.6em;
+        margin-left: -1px;
+    }
+
+    .search-icon{
+        height: 1.2em;
+        margin-top: 3px;
+    }
+
+    .search-voice {
+        height: 1.6em;
+        width: 1.6em;
+        border: none;
+        border-radius: 50%;
+        padding: 0.2em 0.2em;
+        margin-left: 5px;
+    }
+}
+
+.right-section {
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 35px;
+    flex-shrink: 0;
+
+    .upload-button {
+        height: 20px;
+    }
+
+    .youtube-apps {
+        height: 20px;
+    }
+
+    .notifications {
+        height: 20px;
+    }
+
+    .my-channel {
+        height: 20px;
+        border-radius: 10px;
+
+    }
+}
