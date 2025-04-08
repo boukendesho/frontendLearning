@@ -32,9 +32,8 @@ aside {
 }
 
 main {
-    background-color: bisque;
+    /* background-color: bisque; */
     grid-area: main;
-    /* margin: 0.5em 0.5em; */
 }
 
 .navbar-box {
@@ -122,6 +121,26 @@ main {
     }
 }
 
+.notifications-area {
+    position: relative;
+    height: 20px;
+}
+
+.notifications-number {
+    position: absolute;
+    background-color: darkred;
+    height: 10px;
+    width: 10px;
+    color: white;
+    font-size: 10px;
+    padding-bottom: 1px;
+    border: 1px solid white;
+    border-radius: 100%;
+    text-align: center;
+    top: 0;
+    right: 0;
+}
+
 .sidebar-contents {
     /* background-color: lightpink; */
     height: 50px;
@@ -145,4 +164,89 @@ main {
 
 .sidebar-contents div {
     font-size: 6px;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 10px 10px;
+    gap: 10px;
+}
+
+@media(max-width: 870px) {
+    .video-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 450px) {
+    .video-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.thumbnail-row {
+    position: relative;
+}
+
+.video-time {
+    position: absolute;
+    right: 6px;
+    bottom: 10px;
+    font-size: 8px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    padding: 2px 2px;
+}
+
+.thumbnail {
+    object-fit: cover;
+    height: 100px;
+    width: 100%;
+}
+
+.video-preview {
+    display: flex;
+    flex-direction: column;
+    /* background-color: lightblue; */
+}
+
+.video-info-grid {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+}
+
+.channel-picture {
+    padding-top: 10px;
+
+}
+
+.channel-author {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.video-info {
+    padding-top: 10px;
+}
+
+.video-title {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.video-author {
+    font-size: 9px;
+    color: rgb(96, 96, 96);
+    margin-top: 10px;
+}
+
+.video-stats {
+    font-size: 9px;
+    color: rgb(96, 96, 96);
+    margin-bottom: 10px;
 }
