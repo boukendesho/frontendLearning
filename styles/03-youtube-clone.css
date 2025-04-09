@@ -76,6 +76,7 @@ main {
         height: 1.8em;
         width: 2.6em;
         margin-left: -1px;
+        position: relative;
     }
 
     .search-icon{
@@ -91,6 +92,22 @@ main {
         padding: 0.2em 0.2em;
         margin-left: 5px;
     }
+}
+
+.search-button .tooltip {
+    position: absolute;
+    bottom: -20px;
+    background-color: black;
+    color: white;
+    font-size: 10px;
+    padding: 2px 2px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.search-button:hover .tooltip {
+    opacity: 1;
 }
 
 .right-section {
