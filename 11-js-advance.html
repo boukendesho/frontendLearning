@@ -26,6 +26,17 @@
       gpuBrand.forEach((items, index) => {
         console.log(index + " " + items);
       });
+
+      const gpus = gpuBrand.filter((items) => items !== "NVIDIA");
+      console.log(gpus)
+
+      const gpuComment = gpuBrand.map((item) => {
+        if (item !== "NVIDIA")
+          return item + "is Good GPU Brand"
+        else
+          return "So " + item + " fxxk you"
+      })
+      console.log(gpuComment)
     </script>
   </body>
 </html>
