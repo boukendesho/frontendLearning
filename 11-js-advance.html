@@ -11,11 +11,21 @@
 
       gpuBrand.forEach((item) => console.log(item));
 
-      setTimeout(console.log('waiting'), 3000)
+      setTimeout(console.log("waiting"), 3000);
 
-      console.log('This comes first')
+      console.log("This comes first");
 
-      setInterval(console.log('Tik tok...'), 1000)
+      setInterval(console.log("Tik tok..."), 1000);
+
+      const arrowFuction = () => {
+        console.log("A arrow fuction");
+      };
+
+      arrowFuction();
+
+      gpuBrand.forEach((items, index) => {
+        console.log(index + " " + items);
+      });
     </script>
   </body>
 </html>
