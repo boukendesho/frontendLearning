@@ -23,38 +23,30 @@
       );
     }
 
-    function ChatMessage(props) {
-      const msg = props.message;
-      const sender = props.sender;
-
-      if (sender === 'robot') {
-        return (
-          <div>
-            <img src="robot.png" width="50" />
-            {msg}
-          </div>
-        );
-      }
+    function ChatMessage({ message, sender }) {
 
       return (
         <div>
-          {msg}
-          <img src="user.png" width="50" />
+          {sender === 'robot' && (<img src="robot.png" width="50" />)}
+          {message}
+          {sender === 'user' && (<img src="user.png" width="50" />)}
         </div>
       );
     }
 
-    const app = (
-      <>
-        <ChatInput />
-        <ChatMessage message="hello chatbot" sender="user" />
-        <ChatMessage message="hello! How can i help you?" sender="robot" />
-      </>
-    );
+    function App() {
+      return (
+        <>
+          <ChatInput />
+          <ChatMessage message="hello chatbot" sender="user" />
+          <ChatMessage message="hello! How can i help you?" sender="robot" />
+        </>
+      );
+    }
 
     const container = document.querySelector('.js-container');
     const root = ReactDOM.createRoot(container);
-    root.render(app);
+    root.render(<App />);
   </script>
 </body>
 
