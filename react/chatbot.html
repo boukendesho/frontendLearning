@@ -34,12 +34,32 @@
       );
     }
 
+    function ChatMessages() {
+      const chatMessages = [{
+        message: "hello chatbot",
+        sender: "user",
+        id: "id1"
+      }, {
+        message: "hello! How can i help you?",
+        sender: "robot",
+        id: "id2"
+      }];
+      return (
+        <>
+          {chatMessages.map((chatMessage) => {
+            return (
+              <ChatMessage message={chatMessage.message} sender={chatMessage.sender} key={chatMessage.id} />
+            );
+          })}
+        </>
+      );
+    }
+
     function App() {
       return (
         <>
           <ChatInput />
-          <ChatMessage message="hello chatbot" sender="user" />
-          <ChatMessage message="hello! How can i help you?" sender="robot" />
+          <ChatMessages />
         </>
       );
     }
