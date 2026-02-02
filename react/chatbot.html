@@ -3,6 +3,24 @@
 
 <head>
   <title>chatbot</title>
+  <style>
+    .send-button {
+      background-color: green;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      margin-left: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .chat-input {
+      padding: 12px 15px;
+      border-radius: 10px;
+      border-width: 1px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 
 <body>
@@ -47,10 +65,10 @@
       
 
       return (
-        <>
-          <input placeholder="Send a message to Chatbot" size="30" onChange={saveInputText} value={inputText} />
-          <button onClick={sendMessage}>Send</button>
-        </>
+        <div>
+          <input placeholder="Send a message to Chatbot" size="30" onChange={saveInputText} value={inputText} className="chat-input" />
+          <button onClick={sendMessage} className="send-button">Send</button>
+        </div>
       );
     }
 
