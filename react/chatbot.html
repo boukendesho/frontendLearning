@@ -14,11 +14,16 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     .chat-input {
       padding: 12px 15px;
       border-radius: 10px;
       border-width: 1px;
       font-size: 16px;
+    }
+
+    .spinner {
+      height: 40px;
     }
   </style>
 </head>
@@ -32,13 +37,13 @@
 
   <script src="https://unpkg.com/supersimpledev/babel.js"></script>
   <script type="text/babel">
-    function ChatInput({ chatMessages,setChatMessages }) {
-      const [inputText,setInputText] = React.useState("");
+    function ChatInput({ chatMessages, setChatMessages }) {
+      const [inputText, setInputText] = React.useState("");
       function saveInputText(event) {
         setInputText(event.target.value);
       }
 
-      function sendMessage() {
+      async function sendMessage() {
         const newChatMessages = [
           ...chatMessages,
           {
@@ -49,7 +54,17 @@
         ]
         setChatMessages(newChatMessages);
 
-        const response = Chatbot.getResponse(inputText);
+        setChatMessages([
+          ...newChatMessages,
+          {
+            message: <img src="spin.gif" className="spinner" />,
+            sender: "robot",
+            id: crypto.randomUUID()
+          }
+        ])
+
+        const response = await Chatbot.getResponseAsync(inputText);
+
         setChatMessages([
           ...newChatMessages,
           {
@@ -62,7 +77,7 @@
         setInputText("");
       }
 
-      
+
 
       return (
         <div>
