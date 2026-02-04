@@ -1,0 +1,42 @@
+.chat-message-user {
+  justify-content: end;
+}
+
+.chat-message-user,
+.chat-message-robot {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.chat-message-text {
+  position: relative;
+  background-color: rgb(238, 238, 238);
+  padding: 15px 20px;
+  border-radius: 10px;
+  min-width: 60px;
+  max-width: 300px;
+}
+
+.chat-message-profile {
+  width: 45px;
+}
+
+.chat-message-timestamp {
+  font-size: 0.8rem;
+  color: grey;
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+}
+
+.spinner {
+  height: 40px;
+  margin: -15px;
+}
+
+/* If the message text contains a spinner, hide the timestamp */
+.chat-message-text:has(.spinner) .chat-message-timestamp {
+  display: none;
+}
