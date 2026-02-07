@@ -7,19 +7,56 @@
   <style>
     body {
       margin: 0;
-      padding: 0;
-      min-height: 100vh;
+      height: 100vh;
       display: grid;
       grid-template-rows: 60px 1fr auto;
     }
-    nav {
+
+    header {
       background-color: rgb(8, 79, 45);
+    }
+
+    header {
+      display: flex;
+    }
+
+    .left-section {
+      width: 208px;
+    }
+
+    .middle-section {
+      flex-grow: 1;
+
+      display: flex;
+    }
+
+    .right-section {
+      width: 180px;
     }
   </style>
 </head>
 
 <body>
-  <nav>Navbar</nav>
+  <header>
+    <section class="left-section">
+      <a href="/">
+        <img src="../../images/amazon-logo-white.png" alt="site logo">
+      </a>
+    </section>
+    <section class="middle-section">
+      <input type="search" name="search" id="search">
+      <div>
+        <button type="button">Search</button>
+        <img src="../../images/font-awesome-right-arrow.svg" alt="search icon">
+      </div>
+    </section>
+    <section class="right-section">
+      <a href="orders"></a>
+      <a href="checkout">
+        <img src="../../images/font-awesome-cart-white.svg" alt="cart icon">
+      </a>
+    </section>
+  </header>
   <main>main</main>
   <footer>2026 react ecommerce project</footer>
 </body>
