@@ -16,11 +16,21 @@
       text-decoration: none;
     }
 
-    a:hover {
+    .left-section a,
+    .orders-link,
+    .cart-link {
       border: 1px solid transparent;
-      border-color: white;
-      border-radius: 2px;
       padding: 5px;
+
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .left-section a:hover,
+    .orders-link:hover,
+    .cart-link:hover {
+      border-color: white;
     }
 
     header {
@@ -112,8 +122,8 @@
       font-size: 14px;
       font-weight: 700;
       position: absolute;
-      top: 1px;
-      right: 1px;
+      top: 5px;
+      right: 5px;
       width: 26px;
       text-align: center;
     }
