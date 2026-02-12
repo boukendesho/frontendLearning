@@ -131,6 +131,17 @@
       font-size: 14px;
       font-weight: bold;
     }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    footer {
+      color: darkgray;
+      font-size: 0.8rem;
+      margin: 0 auto;
+    }
   </style>
 </head>
 
@@ -156,7 +167,13 @@
       </a>
     </section>
   </header>
-  <main>main</main>
+  <main>
+    <div class="product-container">
+      <div class="item-container">item1</div>
+      <div class="item-container">item2</div>
+      <div class="item-container">item3</div>
+    </div>
+  </main>
   <footer>2026 react ecommerce project</footer>
 </body>
 
