@@ -150,6 +150,16 @@
       object-fit: cover;
     }
 
+    .item-cart-button {
+      background-color: rgb(8, 79, 45);
+      color: white;
+      padding: 8px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
     footer {
       color: darkgray;
       font-size: 0.8rem;
@@ -184,12 +194,12 @@
     <div class="product-container">
       <div class="item-container">
         <img class="item-image" src="../../images/products/athletic-cotton-socks-6-pairs.jpg" alt="socks">
-        <p>Black and Gray Athletic Cotton Socks - 6 Pairs</p>
+        <div>Black and Gray Athletic Cotton Socks - 6 Pairs</div>
         <div>
           <img src="../../images/ratings/rating-45.png" alt="review star">
           <a href="#">87</a>
         </div>
-        <p>$10.90</p>
+        <div>$10.90</div>
         <select name="item-quantity" id="quantity-select">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -197,7 +207,7 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-        <button>Add to Cart</button>
+        <button class="item-cart-button">Add to Cart</button>
       </div>
       <div class="item-container">item2</div>
       <div class="item-container">item3</div>
