@@ -1,0 +1,296 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>react-ecommerce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 60px 1fr auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: rgb(8, 79, 45);
+
+      & a {
+        display: inline-block;
+        text-decoration: none;
+        border: 1px solid transparent;
+        padding: 5px;
+      }
+
+      & a:hover {
+        border: 1px solid white;
+      }
+    }
+
+    .left-section {
+      width: 208px;
+
+      & a {
+        margin-left: 15px;
+      }
+
+      & img {
+        height: 35px;
+        width: auto;
+        display: block;
+      }
+    }
+
+    .middle-section {
+      flex: 1;
+      max-width: 850px;
+
+      display: flex;
+      align-items: center;
+
+      & #search {
+        flex: 1;
+
+        height: 36px;
+        padding: 0 10px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+      }
+
+      & div {
+        display: flex;
+        align-items: center;
+      }
+
+      & button {
+        height: 36px;
+        padding: 0 15px;
+        background-color: #febd69;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+
+        & img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+
+    .right-section {
+      width: 180px;
+      display: flex;
+      flex-shrink: 0;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .orders-link {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .cart-link {
+      display: flex;
+      align-items: center;
+      position: relative;
+      gap: 0.25rem;
+    }
+
+    .cart-icon {
+      width: 38px;
+    }
+
+    .cart-quantity {
+      color: rgb(8, 79, 45);
+      font-weight: bold;
+      position: absolute;
+      top: 6px;
+      left: 13px;
+      width: 26px;
+      text-align: center;
+    }
+
+    .cart-text {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      /* gap: 1rem; */
+    }
+
+    .item-container {
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-right: 1px solid rgb(240, 240, 240);
+      border-bottom: 1px solid rgb(240, 240, 240);
+    }
+
+    .item-image {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .item-text {
+      margin-bottom: 10px;
+    }
+
+    .item-rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 5px;
+    }
+
+    .item-rating-image {
+      width: 100px;
+    }
+
+    .item-rating-link {
+      color: rgb(8, 79, 45);
+      text-decoration: none;
+      margin-top: 3px;
+    }
+
+    .item-price {
+      margin-bottom: 10px;
+    }
+
+    .item-quantity-selector {
+      width: 50px;
+      margin-bottom: 30px;
+      border: 1px solid rgb(200, 200, 200);
+      border-radius: 5px;
+      padding: 3px 5px;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(200, 200, 200, 0.2);
+    }
+
+    .item-cart-button {
+      background-color: rgb(8, 79, 45);
+      color: white;
+      padding: 8px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(8, 79, 45, 0.75);
+      }
+    }
+
+    footer {
+      color: darkgray;
+      font-size: 0.8rem;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section class="left-section">
+      <a href="/">
+        <img src="../../images/amazon-logo-white.png" alt="site logo">
+      </a>
+    </section>
+    <section class="middle-section">
+      <input type="search" name="search" id="search" placeholder="Search">
+      <div>
+        <button type="button"><img src="../../images/font-awesome-right-arrow.svg" alt="search icon"></button>
+      </div>
+    </section>
+    <section class="right-section">
+      <a class="orders-link" href="orders">Orders</a>
+      <a class="cart-link" href="checkout">
+        <img class="cart-icon" src="../../images/font-awesome-cart-white.svg" alt="cart icon">
+        <div class="cart-quantity">3</div>
+        <div class="cart-text">Cart</div>
+      </a>
+    </section>
+  </header>
+  <main>
+    <div class="product-container">
+      <div class="item-container">
+        <img class="item-image" src="../../images/products/athletic-cotton-socks-6-pairs.jpg" alt="socks">
+        <div class="item-text">Black and Gray Athletic Cotton Socks - 6 Pairs</div>
+        <div class="item-rating">
+          <img class="item-rating-image" src="../../images/ratings/rating-45.png" alt="rating star">
+          <a class="item-rating-link" href="#">87</a>
+        </div>
+        <div class="item-price">$10.90</div>
+        <select class="item-quantity-selector" name="item-quantity" id="quantity-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button class="item-cart-button">Add to Cart</button>
+      </div>
+      <div class="item-container">
+        <img class="item-image" src="../../images/products/intermediate-composite-basketball.jpg" alt="socks">
+        <div class="item-text">Intermediate Size Basketball</div>
+        <div class="item-rating">
+          <img class="item-rating-image" src="../../images/ratings/rating-40.png" alt="rating star">
+          <a class="item-rating-link" href="#">127</a>
+        </div>
+        <div class="item-price">$20.95</div>
+        <select class="item-quantity-selector" name="item-quantity" id="quantity-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button class="item-cart-button">Add to Cart</button>
+      </div>
+      <div class="item-container">
+        <img class="item-image" src="../../images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg" alt="socks">
+        <div class="item-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+        <div class="item-rating">
+          <img class="item-rating-image" src="../../images/ratings/rating-45.png" alt="rating star">
+          <a class="item-rating-link" href="#">56</a>
+        </div>
+        <div class="item-price">$7.99</div>
+        <select class="item-quantity-selector" name="item-quantity" id="quantity-select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <button class="item-cart-button">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <footer>2026 react ecommerce project</footer>
+</body>
+
+</html>
