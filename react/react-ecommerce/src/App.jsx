@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import "./App.css";
 import Header from "./Header";
+import Footer from "./Footer";
 import Rating40 from "./assets/ratings/rating-40.png";
 import Rating45 from "./assets/ratings/rating-45.png";
 import SocksImage from "./assets/athletic-cotton-socks-6-pairs.jpg";
@@ -16,11 +17,7 @@ function App() {
       <main>
         <div className="product-container">
           <div className="item-container">
-            <img
-              className="item-image"
-              src={SocksImage}
-              alt="socks"
-            />
+            <img className="item-image" src={SocksImage} alt="socks" />
             <div className="item-text">
               Black and Gray Athletic Cotton Socks - 6 Pairs
             </div>
@@ -80,12 +77,10 @@ function App() {
             <button className="item-cart-button">Add to Cart</button>
           </div>
           <div className="item-container">
-            <img
-              className="item-image"
-              src={TshirtImage}
-              alt="tshirt"
-            />
-            <div className="item-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+            <img className="item-image" src={TshirtImage} alt="tshirt" />
+            <div className="item-text">
+              Adults Plain Cotton T-Shirt - 2 Pack
+            </div>
             <div className="item-rating">
               <img
                 className="item-rating-image"
@@ -112,7 +107,7 @@ function App() {
           </div>
         </div>
       </main>
-      <footer>2026 react ecommerce project</footer>
+      <Footer />
     </>
   );
 }

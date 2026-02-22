@@ -4,13 +4,10 @@
 
 body {
   margin: 0;
+}
+
+#root {
   height: 100vh;
   display: grid;
   grid-template-rows: 60px 1fr auto;
-}
-
-footer {
-  color: darkgray;
-  font-size: 0.8rem;
-  margin: 0 auto;
 }
