@@ -1,6 +1,11 @@
 // import { useState } from "react";
 import "./App.css";
 import Header from "./Header";
+import Rating40 from "./assets/ratings/rating-40.png";
+import Rating45 from "./assets/ratings/rating-45.png";
+import SocksImage from "./assets/athletic-cotton-socks-6-pairs.jpg";
+import BasketballImage from "./assets/intermediate-composite-basketball.jpg";
+import TshirtImage from "./assets/adults-plain-cotton-tshirt-2-pack-teal.jpg";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -13,7 +18,7 @@ function App() {
           <div className="item-container">
             <img
               className="item-image"
-              src="../../images/products/athletic-cotton-socks-6-pairs.jpg"
+              src={SocksImage}
               alt="socks"
             />
             <div className="item-text">
@@ -22,7 +27,7 @@ function App() {
             <div className="item-rating">
               <img
                 className="item-rating-image"
-                src="../../images/ratings/rating-45.png"
+                src={Rating45}
                 alt="rating star"
               />
               <a className="item-rating-link" href="#">
@@ -46,14 +51,14 @@ function App() {
           <div className="item-container">
             <img
               className="item-image"
-              src="../../images/products/intermediate-composite-basketball.jpg"
-              alt="socks"
+              src={BasketballImage}
+              alt="basketball"
             />
             <div className="item-text">Intermediate Size Basketball</div>
             <div className="item-rating">
               <img
                 className="item-rating-image"
-                src="../../images/ratings/rating-40.png"
+                src={Rating40}
                 alt="rating star"
               />
               <a className="item-rating-link" href="#">
@@ -77,14 +82,14 @@ function App() {
           <div className="item-container">
             <img
               className="item-image"
-              src="../../images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg"
-              alt="socks"
+              src={TshirtImage}
+              alt="tshirt"
             />
             <div className="item-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
             <div className="item-rating">
               <img
                 className="item-rating-image"
-                src="../../images/ratings/rating-45.png"
+                src={Rating45}
                 alt="rating star"
               />
               <a className="item-rating-link" href="#">
