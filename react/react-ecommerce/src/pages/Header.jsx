@@ -1,7 +1,7 @@
 import "./Header.css";
-import { Logo } from "./assets/amazon-logo-white.png";
-import { SearchArrow } from "./assets/font-awesome-right-arrow.svg";
-import { CartIcon } from "./assets/font-awesome-cart-white.svg";
+import { Logo } from "../assets/amazon-logo-white.png";
+import { SearchArrow } from "../assets/font-awesome-right-arrow.svg";
+import { CartIcon } from "../assets/font-awesome-cart-white.svg";
 
 export function Header() {
   return (
