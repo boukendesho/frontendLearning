@@ -1,9 +1,9 @@
 import "./Header.css";
-import Logo from "./assets/amazon-logo-white.png";
-import SearchArrow from "./assets/font-awesome-right-arrow.svg";
-import CartIcon from "./assets/font-awesome-cart-white.svg";
+import { Logo } from "./assets/amazon-logo-white.png";
+import { SearchArrow } from "./assets/font-awesome-right-arrow.svg";
+import { CartIcon } from "./assets/font-awesome-cart-white.svg";
 
-function Header() {
+export function Header() {
   return (
     <>
       <header>
@@ -34,5 +34,3 @@ function Header() {
     </>
   );
 }
-
-export default Header;

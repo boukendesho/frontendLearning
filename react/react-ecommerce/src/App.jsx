@@ -1,12 +1,12 @@
 // import { useState } from "react";
 import "./App.css";
-import Header from "./Header";
-import Footer from "./Footer";
-import Rating40 from "./assets/ratings/rating-40.png";
-import Rating45 from "./assets/ratings/rating-45.png";
-import SocksImage from "./assets/athletic-cotton-socks-6-pairs.jpg";
-import BasketballImage from "./assets/intermediate-composite-basketball.jpg";
-import TshirtImage from "./assets/adults-plain-cotton-tshirt-2-pack-teal.jpg";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { Rating40 } from "./assets/ratings/rating-40.png";
+import { Rating45 } from "./assets/ratings/rating-45.png";
+import { SocksImage } from "./assets/athletic-cotton-socks-6-pairs.jpg";
+import { BasketballImage } from "./assets/intermediate-composite-basketball.jpg";
+import { TshirtImage } from "./assets/adults-plain-cotton-tshirt-2-pack-teal.jpg";
 
 function App() {
   // const [count, setCount] = useState(0);
